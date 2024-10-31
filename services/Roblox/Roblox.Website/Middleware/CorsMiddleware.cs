@@ -12,7 +12,7 @@ public class RobloxPlayerCorsMiddleware
 
     private string GenerateCspHeader(bool isAuthenticated)
     {
-        var connectSrc = "'self' https://*.economysimulator.com wss://*.economysimulator.com https://hcaptcha.com https://*.hcaptcha.com https://*.cdn.com";
+        var connectSrc = "'self' https://*.roblox.bar wss://*.roblox.bar https://hcaptcha.com https://*.hcaptcha.com https://*.cdn.com";
 #if DEBUG
         connectSrc += " ws://localhost:*";
 #endif

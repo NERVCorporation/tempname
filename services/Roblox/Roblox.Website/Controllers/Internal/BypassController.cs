@@ -1108,15 +1108,15 @@ namespace Roblox.Website.Controllers
         public async Task<string> CreateAccountAndSetCookie()
         {
             var name = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 14);
-            var result = await services.users.CreateUser(name, "AmogusDrip69", Gender.Male);
+            var result = await services.users.CreateUser(ROBLOX, "ROBLOX Integration test", Gender.Male);
             await services.users.InsertOrUpdateMembership(result.userId, MembershipType.BuildersClub);
             var id = await services.users.CreateApplication(new CreateUserApplicationRequest()
             {
-                about = "Integration test",
+                about = "ROBLOX Integration test",
                 socialPresence = "",
                 isVerified = true,
-                verifiedUrl = "https://economysimulator.com/",
-                verificationPhrase = "Integration test",
+                verifiedUrl = "https://www.roblox.bar/",
+                verificationPhrase = "ROBLOX Integration test",
                 verifiedId = "1",
             });
             var joinId = await services.users.ProcessApplication(id, 1, UserApplicationStatus.Approved);
