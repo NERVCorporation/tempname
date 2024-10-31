@@ -950,6 +950,14 @@ namespace Roblox.Website.Controllers
         [HttpGetBypass("Setting/QuietGet/{type}")]
         public MVC.ActionResult<dynamic> GetAppSettings(string type)
         {
+            switch (type)
+            {
+                case "ClientAppSettings":
+                case "RCCService":
+                    break;
+                default:
+                    throw new RobloxException(400, 0, "BadRequest");
+            }
             try
             {
                 string jsonFilePath = Path.Combine(Configuration.JsonDataDirectory, type + ".json");
