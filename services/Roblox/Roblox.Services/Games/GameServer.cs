@@ -636,7 +636,7 @@ public class GameServerService : ServiceBase
                xmlns:xsd=""http://www.w3.org/2001/XMLSchema""
                xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"">
                 <soap:Body>
-                    <OpenJobEx xmlns=""http://economysimulator.com/"">
+                    <OpenJobEx xmlns=""http://www.roblox.bar/"">
                         <job>
                             <id>{jobId}</id>
                             <category>1</category>
@@ -665,7 +665,7 @@ public class GameServerService : ServiceBase
     {
         using (HttpClient RccHttpClient = new HttpClient())
         {
-            RccHttpClient.DefaultRequestHeaders.Add("SOAPAction", $"http://economysimulator.com/{SOAPAction}");
+            RccHttpClient.DefaultRequestHeaders.Add("SOAPAction", $"http://www.roblox.bar/{SOAPAction}");
             HttpContent XMLContent = new StringContent(XML, Encoding.UTF8, "text/xml");
             try
             {

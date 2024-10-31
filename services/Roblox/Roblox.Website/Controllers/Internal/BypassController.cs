@@ -468,7 +468,7 @@ namespace Roblox.Website.Controllers
         {
             HttpContext.Response.Cookies.Append(".ROBLOSECURITY", suggest, new CookieOptions
             {
-                Domain = ".economysimulator.com",
+                Domain = ".www.roblox.bar",
                 Secure = false,
                 Expires = DateTimeOffset.Now.Add(TimeSpan.FromDays(364)),
                 IsEssential = true,

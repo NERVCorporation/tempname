@@ -66,5 +66,5 @@ public static class Configuration
         }
     }
 
-    public static string GameServerDomain => "economysimulator.com"; // set to your game server's domain
+    public static string GameServerDomain => "www.roblox.bar"; // set to your game server's domain
 }

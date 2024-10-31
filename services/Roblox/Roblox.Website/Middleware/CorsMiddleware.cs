@@ -28,7 +28,7 @@ public class RobloxPlayerCorsMiddleware
         
         // unsafe-eval required by nextjs
         var scriptSrc =
-            "'unsafe-eval' 'self' https://hcaptcha.com https://*.hcaptcha.com https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js https://economysimulator.com";
+            "'unsafe-eval' 'self' https://hcaptcha.com https://*.hcaptcha.com https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js https://www.roblox.bar";
         
         return "default-src 'self'; img-src "+imgSrc+"; child-src 'self'; script-src "+scriptSrc+"; frame-src 'self' https://hcaptcha.com https://*.hcaptcha.com; style-src 'unsafe-inline' 'self' https://fonts.googleapis.com https://hcaptcha.com https://*.hcaptcha.com https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css; font-src 'self' fonts.gstatic.com; connect-src "+connectSrc+"; worker-src 'self';";
     }

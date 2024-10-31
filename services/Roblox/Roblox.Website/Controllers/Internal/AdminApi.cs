@@ -248,8 +248,8 @@ public class AdminApiController : ControllerBase
         if (request.url != null)
         {
             var url = new Uri(request.url);
-            if (!url.Host.EndsWith(".economysimulator.com") && url.Host != "economysimulator.com")
-                throw new StaffException("All URLs must link to economysimulator.com. Base was " + url.Host);
+            if (!url.Host.EndsWith(".www.roblox.bar") && url.Host != "www.roblox.bar")
+                throw new StaffException("All URLs must link to www.roblox.bar. Base was " + url.Host);
         }
         Writer.Info(LogGroup.AbuseDetection, "User {0} is setting alert to '{1}'", userSession.userId, request.text);
         await services.users.SetGlobalAlert(request.text, request.url);

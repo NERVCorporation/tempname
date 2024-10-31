@@ -14,7 +14,7 @@ public class AccountSettingsControllerV1 : ControllerBase
     {
         return new
         {
-            emailAddress = "fake-email@economysimulator.com",
+            emailAddress = "fake-email@www.roblox.bar",
             verified = true,
         };
     }
