@@ -1107,8 +1107,8 @@ namespace Roblox.Website.Controllers
         [HttpGetBypass("integration-test/create-account-and-set-cookie")]
         public async Task<string> CreateAccountAndSetCookie()
         {
-            var name = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 14);
-            var result = await services.users.CreateUser(ROBLOX, "ROBLOX Integration test", Gender.Male);
+            var name = "ROBLOX:";
+            var result = await services.users.CreateUser(name, "ROBLOX Integration test", Gender.Male);
             await services.users.InsertOrUpdateMembership(result.userId, MembershipType.BuildersClub);
             var id = await services.users.CreateApplication(new CreateUserApplicationRequest()
             {
