@@ -26,7 +26,7 @@ namespace Roblox.Rendering
         {
             using (HttpClient RccHttpClient = new HttpClient())
             {
-                RccHttpClient.DefaultRequestHeaders.Add("SOAPAction", $"http://www.roblox.com/{SOAPAction}");
+                RccHttpClient.DefaultRequestHeaders.Add("SOAPAction", $"http://roblox.com/{SOAPAction}");
                 HttpContent XMLContent = new StringContent(XML, Encoding.UTF8, "text/xml");
                 try
                 {
